@@ -7,147 +7,49 @@
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --accent-green: #00ff00;
-            --scratch-blue: #38bdf8;
-            --turbo-red: #ff4b4b;
-            --border-thick: 4px solid #000000;
-            --border-thin: 2px solid #000000;
-        }
-        * { box-sizing: border-box; }
-        body { 
-            font-family: 'Chakra Petch', sans-serif; 
-            background-color: var(--bg-color); 
-            color: var(--text-main); 
-            margin: 0; 
-            padding: 0; 
-            line-height: 1.4;
-        }
-        header { 
-            text-align: center; 
-            padding: 3rem 1rem 1.5rem 1rem; 
-            background-color: #ffffff;
-            border-bottom: var(--border-thick);
-        }
-        .brand-container {
-            display: inline-flex;
-            align-items: baseline;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .logo-byte { 
-            font-family: 'Press Start 2P', monospace; 
-            font-size: 3.5rem; 
-            color: var(--accent-green); 
-            text-transform: uppercase;
-            -webkit-text-stroke: 2px #000000;
-            text-shadow: 4px 4px 0px #000000;
-        }
-        .logo-size { 
-            font-family: 'Press Start 2P', monospace; 
-            font-size: 2.2rem; 
-            color: #000000; 
-            text-transform: lowercase;
-            font-weight: 900;
-            letter-spacing: -2px;
-        }
-        .motto { 
-            font-family: 'Press Start 2P', monospace; 
-            font-size: 1.1rem; 
-            color: #000000; 
-            margin: 1rem 0;
-            text-transform: uppercase;
-        }
-        .subtitle { 
-            font-size: 1.4rem; 
-            color: var(--text-main); 
-            font-weight: 700; 
-            text-transform: uppercase;
-        }
-        .container { max-width: 950px; margin: 0 auto; padding: 1.5rem; }
-        h2.section-title { 
-            text-align: center; 
-            font-size: 1.8rem; 
-            font-weight: 700;
-            margin-top: 2.5rem; 
-            margin-bottom: 1.5rem; 
-            color: #000000; 
-            text-transform: uppercase;
-        }
-        .hero-graphic-zone {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 1.5rem 0;
-            min-height: 180px;
-        }
-        .hero-graphic-zone img {
-            max-width: 220px;
-            height: auto;
-        }
-        .table-responsive { 
-            margin-top: 1rem; 
-            border: var(--border-thick);
-            box-shadow: 8px 8px 0px #000000;
-            background-color: #ffffff;
-        }
-        table { width: 100%; border-collapse: collapse; text-align: left; }
-        th, td { padding: 1rem; border: var(--border-thin); vertical-align: top; }
-        th { 
-            background-color: #000000; 
-            color: #ffffff;
-            font-family: 'Press Start 2P', monospace;
-            font-size: 0.85rem;
-        }
-        th.track-header { text-align: center; }
-        th.scratch-header { color: var(--scratch-blue); }
-        th.turbo-header { color: var(--turbo-red); }
-        td.tier-name { 
-            font-family: 'Press Start 2P', monospace;
-            font-size: 0.8rem;
-            background-color: #f8fafc; 
-            width: 22%; 
-            color: #000000;
-        }
-        .price { display: block; color: #000000; font-size: 0.9rem; margin-top: 0.5rem; font-weight: 700; }
-        .meta-info { display: block; font-size: 0.75rem; color: var(--text-muted); font-weight: normal; margin-top: 0.25rem; }
-        .tier-desc { font-size: 1.05rem; font-weight: 500; }
-        .what-we-do-card { 
-            background-color: #ffffff; 
-            padding: 2rem; 
-            border: var(--border-thick); 
-            box-shadow: 6px 6px 0px #000000;
-            margin-top: 2rem; 
-        }
-        .what-we-do-card p { font-size: 1.1rem; margin: 0; font-weight: 500; }
-        .contact-card { 
-            background-color: var(--accent-green); 
-            border: var(--border-thick); 
-            padding: 2rem; 
-            box-shadow: 8px 8px 0px #000000;
-            text-align: center; 
-            margin-top: 3.5rem; 
-        }
-        .contact-card h3 { 
-            font-family: 'Press Start 2P', monospace;
-            font-size: 1.4rem; 
-            margin-top: 0; 
-            color: #000000; 
-        }
-        .phone-number { 
-            font-family: 'Press Start 2P', monospace; 
-            font-size: 2.2rem; 
-            color: #000000; 
-            margin-top: 1rem; 
-            display: block; 
-            letter-spacing: -1px;
-        }
-        footer { text-align: center; padding: 3rem 1rem; color: var(--text-muted); font-size: 0.9rem; }
-    </style>
+<link href="https://googleapis.com" rel="stylesheet">
+<style>
+    :root {
+        --bg-color: #ffffff;
+        --accent-green: #00ff00;
+        --border-thick: 4px solid #000000;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --scratch-blue: #38bdf8;
+        --turbo-red: #ff4b4b;
+        --border-thin: 2px solid #000000;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: 'Chakra Petch', sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; padding: 0; line-height: 1.4; }
+    header { text-align: center; padding: 3rem 1rem 1.5rem; background-color: #ffffff; border-bottom: var(--border-thick); }
+    .brand-container { display: inline-flex; align-items: baseline; gap: 0.5rem; margin-bottom: 1rem; }
+    .logo-byte { font-family: 'Press Start 2P', monospace; font-size: 4rem; color: var(--accent-green); text-transform: uppercase; -webkit-text-stroke: 2px #000000; text-shadow: 4px 4px 0px #000000; font-weight: 400; }
+    .logo-size { font-family: 'VT323', monospace; font-size: 5.5rem; color: #000000; text-transform: lowercase; letter-spacing: -2px; line-height: 1; }
+    .motto { font-family: 'Press Start 2P', monospace; font-size: 1.1rem; color: #000000; margin: 1rem 0; text-transform: uppercase; font-weight: 400; }
+    .subtitle { font-size: 1.4rem; color: var(--text-main); font-weight: 700; text-transform: uppercase; }
+    .container { max-width: 950px; margin: 0 auto; padding: 1.5rem; }
+    h2.section-title { text-align: center; font-size: 1.8rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1.5rem; color: #000000; text-transform: uppercase; }
+    .hero-graphic-zone { display: flex; justify-content: center; align-items: center; margin: 1.5rem 0; min-height: 180px; }
+    .hero-graphic-zone img { max-width: 220px; height: auto; }
+    .table-responsive { margin-top: 1rem; border: var(--border-thick); box-shadow: 8px 8px 0px #000000; background-color: #ffffff; }
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    th, td { padding: 1rem; border: var(--border-thin); vertical-align: top; }
+    th { background-color: #000000; color: #ffffff; font-family: 'Press Start 2P', monospace; font-size: 0.85rem; font-weight: 400; }
+    th.track-header { text-align: center; }
+    th.scratch-header { color: var(--scratch-blue); }
+    th.turbo-header { color: var(--turbo-red); }
+    td.tier-name { font-family: 'Press Start 2P', monospace; font-size: 0.8rem; background-color: #f8fafc; width: 22%; color: #000000; font-weight: 400; }
+    .price { display: block; color: #000000; font-size: 0.9rem; margin-top: 0.5rem; font-weight: 700; }
+    .meta-info { display: block; font-size: 0.75rem; color: var(--text-muted); font-weight: normal; margin-top: 0.25rem; }
+    .tier-desc { font-size: 1.05rem; font-weight: 500; }
+    .what-we-do-card { background-color: #ffffff; padding: 2rem; border: var(--border-thick); box-shadow: 6px 6px 0px #000000; margin-top: 2rem; }
+    .what-we-do-card p { font-size: 1.1rem; margin: 0; font-weight: 500; }
+    .contact-card { background-color: var(--accent-green); border: var(--border-thick); padding: 2rem; box-shadow: 8px 8px 0px #000000; text-align: center; margin-top: 3.5rem; }
+    .contact-card h3 { font-family: 'Press Start 2P', monospace; font-size: 1.4rem; margin-top: 0; color: #000000; font-weight: 400; }
+    .phone-number { font-family: 'Press Start 2P', monospace; font-size: 2.2rem; color: #000000; margin-top: 1rem; display: block; letter-spacing: -1px; font-weight: 400; }
+    footer { text-align: center; padding: 3rem 1rem; color: var(--text-muted); font-size: 0.9rem; }
+</style>
+
 </head>
 <body>
     <header>
