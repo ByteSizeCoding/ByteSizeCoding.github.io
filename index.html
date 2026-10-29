@@ -1,61 +1,112 @@
-<link href="https://googleapis.com" rel="stylesheet">
-<style>
-    :root {
-        --bg-color: #ffffff;
-        --accent-green: #00ff00;
-        --border-thick: 4px solid #000000;
-        --text-main: #1e293b;
-        --text-muted: #64748b;
-        --scratch-blue: #38bdf8;
-        --turbo-red: #ff4b4b;
-        --border-thin: 2px solid #000000;
-    }
-    * { box-sizing: border-box; }
-    body { font-family: 'Chakra Petch', sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; padding: 0; line-height: 1.4; }
-    header { text-align: center; padding: 3rem 1rem 1.5rem; background-color: #ffffff; border-bottom: var(--border-thick); }
-    
-    .brand-container { display: inline-flex; align-items: baseline; justify-content: center; gap: 12px; width: 100%; margin-bottom: 1rem; }
-    
-    .logo-byte { 
-        font-family: 'Press Start 2P', monospace; 
-        font-size: 5rem; 
-        color: var(--accent-green); 
-        text-transform: uppercase; 
-        -webkit-text-stroke: 2px #000000; 
-        text-shadow: 4px 4px 0px #000000; 
-        font-weight: 400; 
-    }
-    
-    .logo-size { 
-        font-family: 'VT323', 'Courier New', monospace; 
-        font-size: 5rem; 
-        color: #000000; 
-        text-transform: lowercase; 
-        font-weight: 400;
-        line-height: 0.8;
-    }
-    
-    .motto { font-family: 'Press Start 2P', monospace; font-size: 1.1rem; color: #000000; margin: 1rem 0; text-transform: uppercase; font-weight: 400; }
-    .subtitle { font-size: 1.4rem; color: var(--text-main); font-weight: 700; text-transform: uppercase; }
-    .container { max-width: 950px; margin: 0 auto; padding: 1.5rem; }
-    h2.section-title { text-align: center; font-size: 1.8rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1.5rem; color: #000000; text-transform: uppercase; }
-    .hero-graphic-zone { display: flex; justify-content: center; align-items: center; margin: 1.5rem 0; min-height: 180px; }
-    .hero-graphic-zone img { max-width: 220px; height: auto; }
-    .table-responsive { margin-top: 1rem; border: var(--border-thick); box-shadow: 8px 8px 0px #000000; background-color: #ffffff; }
-    table { width: 100%; border-collapse: collapse; text-align: left; }
-    th, td { padding: 1rem; border: var(--border-thin); vertical-align: top; }
-    th { background-color: #000000; color: #ffffff; font-family: 'Press Start 2P', monospace; font-size: 0.85rem; font-weight: 400; }
-    th.track-header { text-align: center; }
-    th.scratch-header { color: var(--scratch-blue); }
-    th.turbo-header { color: var(--turbo-red); }
-    td.tier-name { font-family: 'Press Start 2P', monospace; font-size: 0.8rem; background-color: #f8fafc; width: 22%; color: #000000; font-weight: 400; }
-    .price { display: block; color: #000000; font-size: 0.9rem; margin-top: 0.5rem; font-weight: 700; }
-    .meta-info { display: block; font-size: 0.75rem; color: var(--text-muted); font-weight: normal; margin-top: 0.25rem; }
-    .tier-desc { font-size: 1.05rem; font-weight: 500; }
-    .what-we-do-card { background-color: #ffffff; padding: 2rem; border: var(--border-thick); box-shadow: 6px 6px 0px #000000; margin-top: 2rem; }
-    .what-we-do-card p { font-size: 1.1rem; margin: 0; font-weight: 500; }
-    .contact-card { background-color: var(--accent-green); border: var(--border-thick); padding: 2rem; box-shadow: 8px 8px 0px #000000; text-align: center; margin-top: 3.5rem; }
-    .contact-card h3 { font-family: 'Press Start 2P', monospace; font-size: 1.4rem; margin-top: 0; color: #000000; font-weight: 400; }
-    .phone-number { font-family: 'Press Start 2P', monospace; font-size: 2.2rem; color: #000000; margin-top: 1rem; display: block; letter-spacing: -1px; font-weight: 400; }
-    footer { text-align: center; padding: 3rem 1rem; color: var(--text-muted); font-size: 0.9rem; }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bytesize Poster</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Bytesized&family=Chakra+Petch:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --accent-green: #00ff00;
+            --border-thick: 4px solid #000000;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --scratch-blue: #38bdf8;
+            --turbo-red: #ff4b4b;
+            --border-thin: 2px solid #000000;
+        }
+        * { box-sizing: border-box; }
+        body { font-family: 'Chakra Petch', sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; padding: 0; line-height: 1.4; }
+        header { text-align: center; padding: 3rem 1rem 1.5rem; background-color: #ffffff; border-bottom: var(--border-thick); }
+        .brand-container { display: inline-flex; align-items: baseline; justify-content: center; gap: 15px; width: 100%; margin-bottom: 1rem; }
+        .logo-byte { font-family: 'Press Start 2P', monospace; font-size: 5rem; color: var(--accent-green); text-transform: uppercase; -webkit-text-stroke: 2px #000000; text-shadow: 4px 4px 0px #000000; font-weight: 400; }
+        .logo-size { font-family: 'Bytesized', monospace; font-size: 5rem; color: #000000; text-transform: lowercase; font-weight: 400; line-height: 0.8; }
+        .motto { font-family: 'Press Start 2P', monospace; font-size: 1.1rem; color: #000000; margin: 1rem 0; text-transform: uppercase; font-weight: 400; }
+        .subtitle { font-size: 1.4rem; color: var(--text-main); font-weight: 700; text-transform: uppercase; }
+        .container { max-width: 950px; margin: 0 auto; padding: 1.5rem; }
+        h2.section-title { text-align: center; font-size: 1.8rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1.5rem; color: #000000; text-transform: uppercase; }
+        .hero-graphic-zone { display: flex; justify-content: center; align-items: center; margin: 1.5rem 0; min-height: 180px; }
+        .hero-graphic-zone img { max-width: 220px; height: auto; }
+        .table-responsive { margin-top: 1rem; border: var(--border-thick); box-shadow: 8px 8px 0px #000000; background-color: #ffffff; }
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th, td { padding: 1rem; border: var(--border-thin); vertical-align: top; }
+        th { background-color: #000000; color: #ffffff; font-family: 'Press Start 2P', monospace; font-size: 0.85rem; font-weight: 400; }
+        th.track-header { text-align: center; }
+        th.scratch-header { color: var(--scratch-blue); }
+        th.turbo-header { color: var(--turbo-red); }
+        td.tier-name { font-family: 'Press Start 2P', monospace; font-size: 0.8rem; background-color: #f8fafc; width: 22%; color: #000000; font-weight: 400; }
+        .price { display: block; color: #000000; font-size: 0.9rem; margin-top: 0.5rem; font-weight: 700; }
+        .meta-info { display: block; font-size: 0.75rem; color: var(--text-muted); font-weight: normal; margin-top: 0.25rem; }
+        .tier-desc { font-size: 1.05rem; font-weight: 500; }
+        .what-we-do-card { background-color: #ffffff; padding: 2rem; border: var(--border-thick); box-shadow: 6px 6px 0px #000000; margin-top: 2rem; }
+        .what-we-do-card p { font-size: 1.1rem; margin: 0; font-weight: 500; }
+        .contact-card { background-color: var(--accent-green); border: var(--border-thick); padding: 2rem; box-shadow: 8px 8px 0px #000000; text-align: center; margin-top: 3.5rem; }
+        .contact-card h3 { font-family: 'Press Start 2P', monospace; font-size: 1.4rem; margin-top: 0; color: #000000; font-weight: 400; }
+        .phone-number { font-family: 'Press Start 2P', monospace; font-size: 2.2rem; color: #000000; margin-top: 1rem; display: block; letter-spacing: -1px; font-weight: 400; }
+        footer { text-align: center; padding: 3rem 1rem; color: var(--text-muted); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand-container">
+            <span class="logo-byte">Byte</span>
+            <span class="logo-size">size</span>
+        </div>
+        <p class="motto">Turn playing games into making games!</p>
+        <p class="subtitle">Premium After-School & Weekend Coding Enrichment for Ages 7–14</p>
+    </header>
+    <div class="container">
+        <div class="hero-graphic-zone">
+            <img src="image_JEQr5V.png" alt="Scratch Cat running with TurboWarp Logo">
+        </div>
+        <h2 class="section-title">Our after-school or weekend classes offer:</h2>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Program Tier</th>
+                        <th class="track-header scratch-header">-SCRATCH-<br><span style="font-weight: normal; font-size: 0.7rem; color: #ffffff; text-transform: uppercase;">For beginners</span></th>
+                        <th class="track-header turbo-header">-TURBOWARP-<br><span style="font-weight: normal; font-size: 0.7rem; color: #ffffff; text-transform: uppercase;">Advanced / PenguinMod</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tier-name">1-on-1<span class="price">$25/h</span></td>
+                        <td class="tier-desc">Your child learns base Scratch 1-on-1, codes a game from scratch, and shares it with the world. Best for children who prefer individual focus over crowds.</td>
+                        <td class="tier-desc">Your child learns how to integrate advanced TurboWarp extensions directly into their Scratch builds. Best for kids who already master the basics.</td>
+                    </tr>
+                    <tr>
+                        <td class="tier-name">Group<span class="price">$15/h</span><span class="meta-info">Per person<br>MAX 3 people</span></td>
+                        <td class="tier-desc">Collaborate with friends or siblings to co-create creative games and interactive worlds within Scratch.</td>
+                        <td class="tier-desc">Students collaborate as a group to unlock advanced TurboWarp blocks and script logic mechanics straight into active game engines.</td>
+                    </tr>
+                    <tr>
+                        <td class="tier-name">Class<span class="price">$15/h</span><span class="meta-info">Per person</span></td>
+                        <td class="tier-desc">Public library group environments. Curriculum teaches students fundamental coding organization and team design dynamics.</td>
+                        <td class="tier-desc">Public library advanced classes covering heavy-lifting pipelines: gamepad support, custom file systems, lists, 3D raytracing, pen features, animation engines, physics, and error handling.</td>
+                    </tr>
+                    <tr>
+                        <td class="tier-name">SUMMER CAMP<span class="price">$84/wk</span><span class="meta-info">Per person</span></td>
+                        <td class="tier-desc">Structured public library summer programs teaching foundational game architecture alongside peer groups. Includes built-in camp seasonal discount rates!</td>
+                        <td class="tier-desc">Deep-dive advanced summer programs covering pro developer loops, 60 FPS physics engines, and custom game compilation. Features active camp discounts!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h2 class="section-title">- WHAT WE DO -</h2>
+        <div class="what-we-do-card">
+            <p>We teach real-world programming fundamentals through highly organized, game-centric frameworks. Students master variables, conditional logic structures, cloning mechanics, and boolean functions used by professional developers. For experienced students, we break past standard limits to optimize code execution pipelines up to 20x faster—enabling 60 FPS physics systems, hardware controller inputs, and custom executable exports. Coding is systemic problem solving; we train students to confidently trace errors, optimize script timelines, and think with an engineering mindset.</p>
+        </div>
+        <div class="contact-card">
+            <h3>Ready to build? Text us to book today!</h3>
+            <span class="phone-number">916-358-0396</span>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2026 ByteSize Coding Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
